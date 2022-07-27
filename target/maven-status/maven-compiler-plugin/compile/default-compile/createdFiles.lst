@@ -1,0 +1,4 @@
+com\crm\pages\LoginPage.class
+com\crm\pages\HomePage.class
+com\crm\factory\DriverFactory.class
+com\crm\utils\ConfigReader.class
