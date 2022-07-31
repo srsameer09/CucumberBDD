@@ -17,7 +17,7 @@ public class ConfigReader {
 					try {
 						//ip = new FileInputStream("./src/test/resources/config/confiq.properties");
 						
-						ip=new FileInputStream("C:\\Users\\SAJ\\eclipse-workspace2022-03-R-win32-x86_64\\CucumberBDD\\src\\test\\resources\\config\\confiq.properties");
+						ip=new FileInputStream("..\\CucumberBDD\\src\\test\\resources\\config\\confiq.properties");
 						System.out.println(ip);
 						prop.load(ip);
 					} catch (IOException e) {
