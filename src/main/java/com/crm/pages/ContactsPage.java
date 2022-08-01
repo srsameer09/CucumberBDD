@@ -10,18 +10,18 @@ public class ContactsPage {
 	 WebDriver driver;
 	//Locator
 	
-	@FindBy(xpath="//a[contains(text(),'')]")
-	WebElement dealsBtn1;
+	@FindBy(xpath="//a[contains(text(),'Contacts')]")
+	WebElement ContactsLnk;
 	
-	@FindBy(xpath="//a[contains(text(),'')]")
-	WebElement dealsBtn;
+	@FindBy(xpath="//a[contains(text(),'New Contact')]")
+	WebElement NewContactLnk;
 
+
+	@FindBy(xpath="//a[contains(text(),'Combined Form')]")
+	WebElement CombinedFormLnk;
 	
-	@FindBy(xpath="")
-	WebElement userName;
-	
-	@FindBy(xpath="" ) 
-	WebElement Pass;
+	@FindBy(xpath="//a[contains(text(),'Full Search Form')]")
+	WebElement FullSearchFormLnk;
 	
 	@FindBy(xpath="//input[@type='submit']")
 	WebElement loginBtn;
@@ -35,4 +35,9 @@ public class ContactsPage {
 		PageFactory.initElements(driver, this); //initializing all the web elements located by @FindBy
 		
 	}
+	
+	public String getContactsPageTile() {
+		return driver.getTitle();
+	}
+	
 }

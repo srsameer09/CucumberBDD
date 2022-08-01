@@ -9,14 +9,17 @@ public class CasesPage {
 
 	 WebDriver driver;
 	//Locator
-	@FindBy(xpath="")
-	WebElement userName;
+	 @FindBy(xpath="//a[contains(text(),'Call')]")
+	 WebElement CaseLnk;
 	
-	@FindBy(xpath="" ) 
-	WebElement Pass;
-	
-	@FindBy(xpath="//input[@type='submit']")
-	WebElement loginBtn;
+	 @FindBy(xpath="//a[contains(text(),'Call')]//following::li[1]")
+	 WebElement SearchFormLnk;
+		
+	 @FindBy(xpath="//a[contains(text(),'Call Scripts')]")
+	 WebElement CallScriptsLnk;
+		
+	 @FindBy(xpath="//a[contains(text(),'Call List')]")
+	 WebElement CallListLnk;
 
 	
 	
@@ -27,4 +30,9 @@ public class CasesPage {
 		PageFactory.initElements(driver, this); //initializing all the web elements located by @FindBy
 		
 	}
+	
+	public String getCasesPageTile() {
+		return driver.getTitle();
+	}
+	
 }

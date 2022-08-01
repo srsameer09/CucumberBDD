@@ -9,14 +9,17 @@ public class CompaniesPage {
 	
 	 WebDriver driver;
 	//Locator
-	@FindBy(xpath="")
-	WebElement userName;
+	 @FindBy(xpath="//a[contains(text(),'Companies')]")
+	 WebElement CompaniesLnk;
+	 
+	@FindBy(xpath="//a[contains(text(),'New Company')]")
+	WebElement NewCompanyLnk;
 	
-	@FindBy(xpath="" ) 
-	WebElement Pass;
-	
-	@FindBy(xpath="//input[@type='submit']")
-	WebElement loginBtn;
+	 @FindBy(xpath="//a[contains(text(),'Combined Form')]")
+	 WebElement CombinedFormLnk;
+	 
+	 @FindBy(xpath="//a[contains(text(),'Full Search Form')]")
+	 WebElement FullSearchFormLnk;
 
 	
 	
@@ -27,4 +30,10 @@ public class CompaniesPage {
 		PageFactory.initElements(driver, this); //initializing all the web elements located by @FindBy
 		
 	}
+	
+	public String getCompaniesPageTile() {
+		return driver.getTitle();
+	}
+	
+	
 }

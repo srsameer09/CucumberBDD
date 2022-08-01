@@ -10,7 +10,7 @@ public class DealsPage {
 	private WebDriver driver;
 	
 	@FindBy(xpath="//a[contains(text(),'Deals')]")
-	WebElement dealsBtn;
+	WebElement dealsLnk;
 	
 	@FindBy(xpath="//a[contains(text(),'New Deal')]")
 	WebElement newDealsLnk;
@@ -30,6 +30,10 @@ public class DealsPage {
 	}
 	
 	//Action
+	
+	public String getDealsPageTile() {
+		return driver.getTitle();
+	}
 	
 
 }

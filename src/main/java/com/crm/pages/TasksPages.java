@@ -11,16 +11,14 @@ public class TasksPages {
 	 WebDriver driver;
 	//Locator
 	
-	@FindBy(xpath="")
-	WebElement userName;
-	
-	@FindBy(xpath="" ) 
-	WebElement Pass;
-	
-	@FindBy(xpath="//input[@type='submit']")
-	WebElement loginBtn;
+		@FindBy(xpath="//a[contains(text(),'Tasks')]")
+		WebElement TasksLnk;
+		
+		@FindBy(xpath="//a[contains(text(),'New Task')]")
+		WebElement NewTaskLnk;
 
-	
+		@FindBy(xpath="//a[contains(text(),'Full Search Form')]")
+		WebElement FullSearchFormLnk;	
 	
 	//Constructor
 	public TasksPages(WebDriver driver) {
@@ -28,5 +26,9 @@ public class TasksPages {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this); //initializing all the web elements located by @FindBy
 		
+	}
+	
+	public String getTasksPagesTile() {
+		return driver.getTitle();
 	}
 }

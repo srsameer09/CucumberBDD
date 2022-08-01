@@ -11,17 +11,16 @@ public class CallPage {
 	 WebDriver driver;
 	//Locator
 	
-	@FindBy(name="username")
-	WebElement userName;
+	 @FindBy(xpath="//a[contains(text(),'Cases')]")
+	 WebElement CasesLnk;
+	 
+	@FindBy(xpath="//a[contains(text(),'New Case')]")
+	WebElement newCasesLnk;
 	
-	@FindBy(how=How.NAME, using= "password" ) 
-	WebElement Pass;
-	
-	@FindBy(xpath="//input[@type='submit']")
-	WebElement loginBtn;
-	
-	@FindBy(xpath="//a[contains(text(),'Forgot Password?')]")
-	WebElement forgotPasswordLnk;
+	 @FindBy(xpath="//a[contains(text(),'Full Search Form')]")
+	 WebElement FullSearchFormLnk;
+		
+
 	
 	
 	//Constructor
@@ -30,5 +29,9 @@ public class CallPage {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this); //initializing all the web elements located by @FindBy
 		
+	}
+	
+	public String getCallPageTile() {
+		return driver.getTitle();
 	}
 }
