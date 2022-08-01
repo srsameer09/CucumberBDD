@@ -1,5 +1,7 @@
 package stepdefinitions;
 
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -26,13 +28,18 @@ public class HomeSteps {
 	    // Double, Byte, Short, Long, BigInteger or BigDecimal.
 	    //
 	    // For other transformations you can register a DataTableType.
-		List<Map<String, String>> credlist = (List<Map<String, String>>) credentialTable.asMap();
+		Map<String, String> cred =  credentialTable.asMap();
 		
+		List<Map.Entry<String,String>> credlist = new ArrayList<Map.Entry<String,String>>(cred.entrySet());
+		String uname =credlist.get(1).getKey();
+		String pass =credlist.get(1).getValue();
 		
-		String uname = credlist.get(0).get("username");
-		String pass = credlist.get(0).get("password");
+		//String uname = credlist.get(0).get("username");
+		//String pass = credlist.get(0).get("password");
 		
-		DriverFactory.getDriver().get("https://classic.freecrm.com/");
+		//DriverFactory.getDriver().get("https://classic.freecrm.com/");
+		DriverFactory.getDriver().navigate().to("https://classic.freecrm.com/");
+		System.out.println("login with: " + uname + " and " + pass);
 		homepage=loginpage.doLogin(uname, pass);
 		
 	    

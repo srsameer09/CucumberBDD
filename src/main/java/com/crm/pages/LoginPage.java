@@ -61,6 +61,7 @@ public class LoginPage {
 	}
 	
 	public HomePage doLogin(String username,String password) {
+		System.out.println("login with: " + username + " and " + password);
 		userName.sendKeys(username);
 		Pass.sendKeys(username);
 		loginBtn.click();
