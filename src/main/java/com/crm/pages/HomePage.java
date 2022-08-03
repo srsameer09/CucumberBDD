@@ -27,6 +27,8 @@ public class HomePage {
 	@FindBy(xpath="//input[@type='image']")
 	WebElement SearchBtn;
 	
+
+	
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -34,6 +36,10 @@ public class HomePage {
 	
 	public String getHomePageTile() {
 		return driver.getTitle();
+	}
+	
+	public void logout() {
+		logoutLnk.click();
 	}
 
 	public String getUserName() {

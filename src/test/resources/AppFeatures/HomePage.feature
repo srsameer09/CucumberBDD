@@ -16,7 +16,7 @@ When user get Home Page
 Then username should be "premrji20 prem"
 
 
-Scenario: go to the search page, and search for an item, expect to see some reference to that item in the result summary
+Scenario: go to the Home page, and search for an item, expect to see some reference to that item in the result summary
 		
 Given user already on the Home page
 When  add "prem" to the search box

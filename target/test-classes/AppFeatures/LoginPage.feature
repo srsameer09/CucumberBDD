@@ -9,6 +9,7 @@ Then page title should be "Free CRM - CRM software for customer relationship man
 Scenario: Forgot Password link
 Given user is on login page
 Then forgot your password link should be displayed
+
 @RegressionTest @SmokeTest
 Scenario: Login with correct credentials
 Given user is on login page

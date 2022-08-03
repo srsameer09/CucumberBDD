@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import org.junit.Assert;
 
+import com.crm.base.Base;
 import com.crm.factory.DriverFactory;
 import com.crm.pages.LoginPage;
 
@@ -10,7 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-public class LoginSteps {
+public class LoginSteps extends Base {
 
 	private static String  title;
 	private LoginPage loginPage=new LoginPage(DriverFactory.getDriver());
@@ -23,7 +24,7 @@ public class LoginSteps {
 	public void user_is_on_login_page() {
 		
 		DriverFactory.getDriver().navigate().to("https://classic.freecrm.com/");
-	   
+		//log.info("url opened");
 	}
 
 	@When("user gets the title of the page")
