@@ -6,6 +6,6 @@ Given user has already login to Application
 |premrji20|premrji20|
 
 Scenario: call page title
-Given
-When
-Then
+Given user is on call page
+When  get title of call page
+Then  title of page should be ""
