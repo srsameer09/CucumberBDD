@@ -11,7 +11,6 @@ import io.cucumber.java.en.When;
 public class NewLogin2Steps extends Base {
 	
 	
-
 	@When("User opens URL {string}")
 	public void user_opens_url(String url) {
 	   DriverFactory.getDriver().get(url);

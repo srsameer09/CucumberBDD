@@ -8,15 +8,19 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage {
 
+	//a[contains(text(),'Contact support')]
 	private WebDriver driver;
 	
-	String newuser="sameer";
+	String user="premrji20 prem";
+
 	
-	//@FindBy(xpath="//td[contains(text(),'+newuser+')]")
-	//WebElement userName1;
-	
-	@FindBy(xpath="//td[contains(text(),'premrji20 prem')]")
+	//@FindBy(xpath="//td[contains(text(),'\"+user+\"')]")
+	//WebElement userName;
+	@FindBy(xpath="//*[@class=\"headertext\"]//preceding::td[2]")
 	WebElement userName;
+	
+	//@FindBy(xpath="//td[contains(text(),'premrji20 prem')]")
+	//WebElement userName;
 	
 	@FindBy(xpath="//*[contains(text(),'Logout')]")
 	WebElement logoutLnk;
