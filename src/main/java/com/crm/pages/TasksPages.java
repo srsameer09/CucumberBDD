@@ -19,6 +19,9 @@ public class TasksPages {
 
 		@FindBy(xpath="//a[contains(text(),'Full Search Form')]")
 		WebElement FullSearchFormLnk;	
+		
+		@FindBy(xpath="//legend[text()='Task Information']")
+		WebElement Legend;
 	
 	//Constructor
 	public TasksPages(WebDriver driver) {
@@ -30,5 +33,16 @@ public class TasksPages {
 	
 	public String getTasksPagesTile() {
 		return driver.getTitle();
+	}
+	
+	public void clickNewTaskLnk() {
+		
+		NewTaskLnk.click();
+	}
+	
+	public void getLegend() {
+		String legend = Legend.getText();
+		System.out.println("legend:"+legend);
+		
 	}
 }

@@ -31,6 +31,15 @@ public class HomePage {
 	@FindBy(xpath="//input[@type='image']")
 	WebElement SearchBtn;
 	
+	//case page link
+	 @FindBy(xpath="//a[contains(text(),'Cases')]")
+	 WebElement CasesLnk;
+	 
+	 @FindBy(xpath="//a[contains(text(),'New Case')]")
+	 WebElement newCasesLnk;
+	 
+	 
+	
 
 	
 	public HomePage(WebDriver driver) {

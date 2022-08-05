@@ -21,7 +21,8 @@ public class CompaniesPage {
 	 @FindBy(xpath="//a[contains(text(),'Full Search Form')]")
 	 WebElement FullSearchFormLnk;
 
-	
+	 @FindBy(xpath="//legend[contains(text(),'Create New  Company')]")
+	 WebElement CompaniesLegend;
 	
 	//Constructor
 	public CompaniesPage(WebDriver driver) {
@@ -33,6 +34,11 @@ public class CompaniesPage {
 	
 	public String getCompaniesPageTile() {
 		return driver.getTitle();
+	}
+	
+	public void getCompaniesLegend() {
+		String companiesLegend = CompaniesLegend.getText();
+		System.out.println("companiesLegend:"+companiesLegend);
 	}
 	
 	

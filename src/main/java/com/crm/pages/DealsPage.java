@@ -21,8 +21,10 @@ public class DealsPage {
 	@FindBy(xpath="//a[contains(text(),'New Deal')]")
 	WebElement newDealsBtn;
 	
-	//cunstructor
+	@FindBy(xpath="//legend[contains(text(),'Deal')]")
+	WebElement DealsLegend;
 	
+	//constructor
 	public DealsPage(WebDriver driver) {
 		
 		this.driver=driver;
@@ -30,9 +32,13 @@ public class DealsPage {
 	}
 	
 	//Action
-	
 	public String getDealsPageTile() {
 		return driver.getTitle();
+	}
+	
+	public void getDealsLegend() {
+		String dealLegend = DealsLegend.getText();
+		System.out.println("DealLegend:"+dealLegend);
 	}
 	
 

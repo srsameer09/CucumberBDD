@@ -25,6 +25,9 @@ public class ContactsPage {
 	
 	@FindBy(xpath="//input[@type='submit']")
 	WebElement loginBtn;
+	
+	@FindBy(xpath="//legend[contains(text(),'Contact Information')]")
+	WebElement ContactLegend;
 
 	
 	
@@ -38,6 +41,11 @@ public class ContactsPage {
 	
 	public String getContactsPageTile() {
 		return driver.getTitle();
+	}
+	
+	public void getContactLegend() {
+		String dealLegend = ContactLegend.getText();
+		System.out.println("ContactLegend:"+ContactLegend);
 	}
 	
 }

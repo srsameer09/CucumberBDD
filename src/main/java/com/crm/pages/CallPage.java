@@ -11,16 +11,21 @@ public class CallPage {
 	 WebDriver driver;
 	//Locator
 	
-	 @FindBy(xpath="//a[contains(text(),'Cases')]")
-	 WebElement CasesLnk;
+	 @FindBy(xpath="//a[contains(text(),'Call')]")
+	 WebElement CallLnk;
 	 
-	@FindBy(xpath="//a[contains(text(),'New Case')]")
-	WebElement newCasesLnk;
+	 @FindBy(xpath="//a[contains(text(),'New Call')]")
+	 WebElement NewCallLnk;
 	
-	 @FindBy(xpath="//a[contains(text(),'Full Search Form')]")
-	 WebElement FullSearchFormLnk;
+	 @FindBy(xpath="//a[contains(text(),'Call Scripts')]")
+	 WebElement CallScriptsLnk;
+	 
+	 @FindBy(xpath="//a[contains(text(),'Call List')]")
+	 WebElement CallListLnk;
+	 
 		
-
+     @FindBy(xpath="//*[contains(text(),'Call Information')]")
+     WebElement fieldsetCaption;
 	
 	
 	//Constructor
@@ -28,10 +33,16 @@ public class CallPage {
 	
 		this.driver = driver; 
 		PageFactory.initElements(driver, this); //initializing all the web elements located by @FindBy
-		
 	}
+	
 	
 	public String getCallPageTile() {
 		return driver.getTitle();
+	}
+	
+	public void getLabel() {
+		
+		String caption = fieldsetCaption.getText();
+		System.out.println("fieldsetCaption i.e Call Information: "+caption);
 	}
 }

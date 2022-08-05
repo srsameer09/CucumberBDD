@@ -9,7 +9,7 @@ public class CasesPage {
 
 	 WebDriver driver;
 	//Locator
-	 @FindBy(xpath="//a[contains(text(),'Call')]")
+	 @FindBy(xpath="//a[contains(text(),'Cases')]")
 	 WebElement CaseLnk;
 	
 	 @FindBy(xpath="//a[contains(text(),'Call')]//following::li[1]")
@@ -20,8 +20,15 @@ public class CasesPage {
 		
 	 @FindBy(xpath="//a[contains(text(),'Call List')]")
 	 WebElement CallListLnk;
-
-	
+	 
+	 
+	 @FindBy(xpath="//a[contains(text(),'Full Search Form')]")
+	 WebElement FullSearchFormLnk;
+	 
+	 @FindBy(xpath="//th[contains(text(),'Targets')]")
+	 WebElement FLDCaption;
+	 
+	 
 	
 	//Constructor
 	public CasesPage(WebDriver driver) {
@@ -33,6 +40,12 @@ public class CasesPage {
 	
 	public String getCasesPageTile() {
 		return driver.getTitle();
+	}
+	
+	public void getFLDCaption() {
+		
+		String caption = FLDCaption.getText();
+		System.out.println("caption:"+caption);
 	}
 	
 }
