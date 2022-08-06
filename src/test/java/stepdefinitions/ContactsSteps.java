@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -7,7 +8,7 @@ import io.cucumber.java.en.When;
 public class ContactsSteps {
 
 	@Given("user2 has already login to Application")
-	public void user2_has_already_login_to_application(io.cucumber.datatable.DataTable dataTable) {
+	public void user2_has_already_login_to_application(DataTable dataTable) {
 	    // Write code here that turns the phrase above into concrete actions
 	    // For automatic transformation, change DataTable to one of
 	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
@@ -23,8 +24,8 @@ public class ContactsSteps {
 	    
 	}
 
-	@Then("title of page should be {string}.")
-	public void title_of_page_should_be(String string) {
+	@Then("title4 of page should be {string}.")
+	public void title4_of_page_should_be(String string) {
 	   
 	}
 

@@ -1,7 +1,11 @@
 package com.crm.pages;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -16,11 +20,11 @@ public class HomePage {
 	
 	//@FindBy(xpath="//td[contains(text(),'\"+user+\"')]")
 	//WebElement userName;
-	@FindBy(xpath="//*[@class=\"headertext\"]//preceding::td[2]")
-	WebElement userName;
-	
-	//@FindBy(xpath="//td[contains(text(),'premrji20 prem')]")
+	//@FindBy(xpath="//*[@class=\"headertext\"]//preceding::td[2]")
 	//WebElement userName;
+	
+	@FindBy(xpath="//td[contains(text(),'User: premrji20 prem')]")
+	WebElement userName;
 	
 	@FindBy(xpath="//*[contains(text(),'Logout')]")
 	WebElement logoutLnk;
@@ -37,6 +41,12 @@ public class HomePage {
 	 
 	 @FindBy(xpath="//a[contains(text(),'New Case')]")
 	 WebElement newCasesLnk;
+	 //Call page link
+	 @FindBy(xpath="//a[contains(text(),'New Call')]")
+	 WebElement NewCallLnk;
+	 
+	 @FindBy(xpath="//a[@href=\"https://classic.freecrm.com/system/index.cfm?action=call\"]")
+	 WebElement CallLnk;
 	 
 	 
 	
@@ -59,6 +69,20 @@ public class HomePage {
 		
 		String username = userName.getText();
 		return username;
+	}
+	
+	public CallPage ClickOnNewCallLink() {
+		Actions action=new Actions(driver);
+		action.moveToElement(CallLnk).build().perform();
+		NewCallLnk.click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		return new CallPage(driver);
+		
+		
+	}
+	
+	public void ClickOnNewCasesLnk() {
+		newCasesLnk.click();
 	}
 	
 

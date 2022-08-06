@@ -41,8 +41,6 @@ public class HomeSteps {
 		DriverFactory.getDriver().navigate().to("https://classic.freecrm.com/");
 		System.out.println("login with: " + uname + " and " + pass);
 		homepage=loginpage.doLogin(uname, pass);
-		
-	    
 	}
 
 	@Given("user is on Home page")

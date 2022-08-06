@@ -40,9 +40,16 @@ public class CallPage {
 		return driver.getTitle();
 	}
 	
-	public void getLabel() {
+	public CallPage ClickNewCallLnk() {
+		NewCallLnk.click();
+		return new CallPage(driver);
+		
+	}
+	
+	public String getLabel() {
 		
 		String caption = fieldsetCaption.getText();
 		System.out.println("fieldsetCaption i.e Call Information: "+caption);
+		return caption;
 	}
 }

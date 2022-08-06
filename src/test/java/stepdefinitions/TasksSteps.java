@@ -1,13 +1,14 @@
 package stepdefinitions;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class TasksSteps {
 
-	@Given("user has already login to Application")
-	public void user_has_already_login_to_application(io.cucumber.datatable.DataTable dataTable) {
+	@Given("user has already login to Application6")
+	public void user_has_already_login_to_application6(DataTable dataTable) {
 	    // Write code here that turns the phrase above into concrete actions
 	    // For automatic transformation, change DataTable to one of
 	    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
@@ -34,7 +35,7 @@ public class TasksSteps {
 	}
 
 	@Given("User is on home page")
-	public void user_is_on_home_page() {
+	public void user_is_on_home_page6() {
 	    
 	}
 

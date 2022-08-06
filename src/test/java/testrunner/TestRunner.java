@@ -11,7 +11,6 @@ plugin = {"pretty","com.aventstack.extentreports.cucumber.adapter.ExtentCucumber
 	
 )
 
-
 public class TestRunner {
 
 }
